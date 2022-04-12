@@ -1,135 +1,102 @@
+// // Variables
 
-// Variables 
 
-// Category => Var,  identity => a, = => operator,  value => 10
+// 1. General Variable Declaration
 
-// Characteristics
-// You can store a value
-// You can change the value that is stored
-// You can store only specific data types
+      // Named Space Memory Allocation that can Change/Vary
+      var a = 10;
+      a = 17;
+      var a;
+      function add(){}; // DATA Types
+      class alpha{};
 
-var a = 10
-a = 11
+      var b; // Declaration
+      b = 11; // Initialization
 
-console.log(a)
-console.log(a)
+      var c = 13; // Definition
+      
 
-// Data Types
+      console.log(a);
 
-// PRIMITIVE DATA TYPES
-    //1. Numeric Data Type/ Number Data Type
-    var b = 11
-    // 2. Sting/Character Data
-    var c = "hello world"
-    var d = 'h'
-    var e = 'hewrjfakdj'
-    // 3. Boolean
-    var f = true
-    // 4. Undefined
-    var g = undefined
-    var h 
-    // 5. Null
-    var i = null
+      console.log("10");
 
-// Non Primitive Data Type
+      // 2. Data Types
 
-    // 6. Object => Unstructured Data
-    var j = {
-        fname:'Arjun',
-        code:12343433
+      var a = 10 // Number
+      var b = "String some word" // String
+      var c = true // Boolean True/False
+      var d = null // With any Value Void
+      var e = function add(){} // Function 
+      var f = {} // Object
+      var g = [] // Array 
+
+// 2. Scope of a Var 
+
+    // 1. Global Scope
+    var x = 18;
+    function display(){
+      console.log(x);
     }
-    console.log(j.code)
-    // 7. Arrays => Structured Data
-    var k = [1,4,"Something",9]
-    // 1 => 0, 4 => 1, Something => 2, 9 => 3
-    console.log(k[2])
+    display();
+    console.log(x);
 
-
-// Scope of Variables
-
-// 1. Global Scope
-    var l = 56
-    function print(){
-        console.log(l)
+    // 2. Functional Scope/ Local Scope
+    function displayText(){
+      var y = 19;
+      {
+        console.log(y);
+      }
+      console.log(y);
     }
-    print()
-// 2. Local Scope/Functional Scope
-    function localScope(){
-        var m = 678
-    }
-    // console.log(m)
-    
-// 3. Block Scope
+    displayText();
+    // console.log(y);
 
-    // Declaration
-    var o // I am declaring the identity of o as Variable
-    o = 12321 // Intialization i am the intializing the value to o
-    var p = 243432 // Definition 
+// 3. Block Scope Variables 
 
-    // Variable Hoisting 
-    console.log(n)
-    var n 
-    // All the declarations will be take to the top
+      // 1. Let Variable / Block Scope Variable
+      function letblockScopeVariable(){
 
-    
-    console.log("Q Value " + q)
-    if(a == 12){
-        var q 
-    }
-
-    // Block Scope Variables
-    // let and const
-
-    {
-        let r = 34
-        console.log(r)
-    }
-
-    {
-        const s = 34
-        // s = 432432
-        console.log(s)
-        // Note: You need to give definition for const no declaration
-        const t = 21321
-    }
-    // Temporal Dead Zone
-
-// 4. Lexical Scope
-
-    var u = 89
-
-    function lex1(){
-       var u = 34
-        console.log(u)
-        function lex2(){
-            var u = 23234
-            console.log(u)
+        for(let i = 0; i< 5; i++){ // Nearest Block 
+          console.log(i);
         }
-        lex2()
+
+        // console.log("Outside Block:"+i)
+      }
+
+      letblockScopeVariable();
+
+      // 2. Const Variable / Block Scope Variable
+
+      // Note: 1. You cannot reinitialize a value
+      //       2. While Declaring only you have to intialize a value
+      function constblockScopeVariable(){
         
-    }
-    lex1()
+        
+        for(const i = 0; i< 5; i++){ // Block 
+          console.log(i);
+        }
 
-    
+        console.log(i);
+        
+      }
+      constblockScopeVariable();
 
-    
-    
+// 4. Variable Hoisting
+
+      // All the Variable Declaration are taken to the Top by JavaScript Engine
+
+      console.log(z);
+
+      var z;
+
+      z = 18;
+
+      function add(){
+        console.log(k)
+        var k;
+        k = 1203;
+      }
+      add();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      // Note: For Let & Const Variable Hoisting doesn't work 
