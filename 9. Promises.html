@@ -1,0 +1,124 @@
+<!Doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+                // console.log(1)
+                // var keepHisWord = true
+                // // Promise(callback(resolve, reject) ) Constructor
+                // promise1 = new Promise(
+                //                         // Call Back Function as an Argument
+                                    
+                //                             function(resolve, reject){
+                //                                 setTimeout(
+                //                                     function(){
+                //                                         if(keepHisWord){
+                //                                             resolve("The man likes to keep his word")
+                //                                         } else{
+                //                                             reject("The man doesn't want to keep his word")
+                //                                         }
+                //                                     }, 2000
+                //                                 )
+                                            
+                //                         }
+                //                     )
+                // console.log(promise1)
+                // console.log("End of Script")
+
+                // Message Queue
+                //  1
+                // Promise pending -> changed the status of pending to resolved and executed the setTimeOut after 2 seconds
+                // End of Script
+
+
+                // // 2. General Asynchronous Call Back Function 
+                // function notifyAll(fnSms, fnEmail) {   
+                //                 setTimeout(function() {   
+                //                     console.log('starting notification process');   
+                //                     fnSms();   
+                //                     fnEmail();   
+                //                 }, 2000);   
+                //             }   
+                //     notifyAll(function() {   
+                //         console.log("Sms send ..");   
+                //     },  
+                //     function() {   
+                //         console.log("email send ..");   
+                //     }); 
+                // // 3. General Console Function  
+                // console.log("End of Script")
+
+// Static Methods
+    //    Note : 1-2 Helper methods
+        //1. Reject Method
+        // var promise3 = Promise.reject("Not interested");
+        // promise3.then(function(value){
+        //                                 console.log("This will not run as it is a resolved promise. The resolved value is ", value);
+        //                              });
+
+        // promise3.catch(function(reason){
+        //                             console.log("This run as it is a rejected promise. The reason is ", reason);
+        //                             });
+
+        // console.log(promise3)
+
+// // ES7
+    // 2. Asynchronous Await
+
+        async function thingOne() {
+                setTimeout(() => console.log("hello"),2000) // Blocking 
+               
+                            return 10
+                                    }
+                        // thingOne()
+
+        async function thingTwo(value) { 
+                                 return value 
+                                }
+                                 
+        async function thingThree(value) { 
+            return value 
+        }
+
+        async function doManyThings() {
+                    // Creating a Variable called result and assigning thingOne return statement to it -> 10
+                    var result = await thingOne(); // Thing Functional Call
+
+                        // Independent of the Functions
+                        console.log("First Function Finished")
+
+                    // Creating a Variable called result2 and assigning thingOne return statement to it -> 10
+
+                    var resultTwo = await thingTwo(result);
+
+                    var finalResult = await thingThree(resultTwo);
+
+                    return finalResult;
+                    }
+
+        // doManyThings() // Do Many Things Functional Calll
+
+        var final = doManyThings();
+        
+        console.log(final)
+        console.log("End of Script")
+
+
+
+
+
+        </script>
+    </body>
+</html>
+
+<!-- 
+    Note: 
+    1. Promises is used to make Continuous Set of Events
+    2. Promises contains three PromisesStatus -> Pending, Reslove, Rejected
+    3. By Default Promise Status starts with Pending
+    4. If there is not Resolve or Reject Then Promise Value will be Undefined
+    5. We Call Promise is Settled when any one of Resolve or Reject Works
+    6. Also we can say Promise changed its State from Pending State to Settled State
+ -->
