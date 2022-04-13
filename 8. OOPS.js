@@ -60,9 +60,58 @@ console.log(obj2.multi())
     var obj4 = new C()
     obj4.add()
  // Hierichal Inheritance
+    class D {
+        display(){
+            console.log("Class D display function")
+        }
+    }
+    class E extends D{
 
-// Method Overloading
+    }
+    class F extends D{
+
+    }
+    class G extends D{
+        
+    }
+
+    var obj5 = new G()
+    obj5.display()
+
+
 // Method Overiding
+class I { // Parent Class
+    display1(a = 10) {
+        console.log( "Display Function in I: " + (a+b))
+    }
+}
+class J extends I{ // Derived Class
+    display1 = (a = 12,b = 14) => {
+        console.log( "Display Function in J: " + (a*b))
+    }
+    IclassMethod(){
+        super.display1()
+    }
+}
+
+var obj6 = new J()
+obj6.display1(1)
+// Method Overloading
+class K{
+    display2(a,b,c){
+        console.log("First Function")
+    }
+    display2(a,b){
+        console.log("Second Function")
+    }
+    display2(a){
+        console.log("Third Function")
+    } 
+}
+
+var obj7 = new K()
+obj7.display2(1,2,3)
+
 // Encapsulation
 // Abstraction
 // Interfaces

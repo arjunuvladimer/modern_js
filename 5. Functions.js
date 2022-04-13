@@ -152,5 +152,45 @@
     ) // Functional Call of callBackFunction
 
 
+// 13. Rest Parameterized Function
+   function restParameterized(...parameters){
+       console.log("display params " + parameters)
+   }
+
+   restParameterized(1,2,3,4,5,6,6,7,8,9)
+
+// 14. Recursive Function
+
+   // 5! = 1 * 2 * 3 * 4  * 5 = 120
+    function factor(num){
+        if(num <= 0){
+            return 1
+        }
+        return num * factor(num - 1)
+              // 5 * factor(5-1){
+              // 4 * factor(4-1){
+              // 1 * factor(1 -1)
+                    1
+              // }
+              //}
+    }
+    console.log(factor(5))
+
+
+    function a(num){
+        return b(num)
+    }
+
+    function b(num){
+        return c(num)
+    }
+    
+    function c(num){
+        return num
+    }
+
+    d = a(2) // JS is processing a event
+
+
 
 
