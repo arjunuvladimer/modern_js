@@ -23,6 +23,11 @@
 // console.log(typeof d)
 // // Accidental Global Variables
 
-const some = ['hello', 'world']
-some.length = 0
-console.log(some[0])
+// const some = ['hello', 'world']
+// some.length = 0
+// console.log(some[0])
+
+
+console.log("printing1")
+setTimeout(()=>console.log("Printing 2"),0)
+console.log("Printing 3")
