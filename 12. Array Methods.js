@@ -134,6 +134,76 @@ const newShiftNumber = shiftNumber.shift()
 console.log(`Shift Method: ${shiftNumber}`)
 console.log(`Shift Method: ${newShiftNumber}`)
 
+// 15. Slice Method
+// Syntax: Array.slice(numberofelements)
+var sliceItems = ['cup','house','spoon','plate']
+var newSliceItems = sliceItems.slice(1)
+console.log(`Slice Method: ${newSliceItems}`)
+    // Start and End Element number
+    var newSliceItems2 = sliceItems.slice(1,2)
+    console.log(`Elements start and End Slice: ${newSliceItems2}`)
+
+// 16. Splice Method
+// Syntax: Array.splice(startIndex)
+
+var splicedItems= [1,2,3,4,5]
+
+var deletedSplicedItems = splicedItems.splice(1,4)
+console.log(`Spliced Items: ${deletedSplicedItems}`)
+
+let products = ["Shoe", "Mobile"];
+products.splice(1,0,"TV");
+console.log(products)
+
+// 17. Unshift Method
+// Syntax: Array.unshift(newElements)
+// it always start from the begining
+
+var unshiftArray = [0,0.5,1,2,3,4,5]
+
+var newUnshitArray = unshiftArray.unshift(22,33)
+
+console.log(`Unshift Method: ${unshiftArray}`)
+
+// 18. Some Method
+// Syntax: Array.some(callback(element,index))
+// Some Method test whether the element in the array
+
+var someRetrval = [2,5,8,9,4,10].some(element => element >=10)
+
+console.log(`Some Method: ${someRetrval}`)
+
+// 19. Sort Method
+// Syntax: Array.sort()
+var sortArray = new Array('a','c','d','b','e')
+var sortedArray = sortArray.sort()
+
+console.log(`Sort Method: ${sortedArray}`)
+
+// 20. toString Method
+// Syntax: Array.toString()
+var arrayToConvert = new Array(1,2,3,4)
+
+var stringArrayConverted = arrayToConvert.toString()
+
+console.log(`toString Method: ${ stringArrayConverted}`)
+
+// 21. Find Method
+// Syntax: Array.find(callback())
+
+var findNum = [2,3,4,1,5]
+var oddNum = findNum.find(element => element%2 == 1)
+console.log(`Odd Number using Find Method: ${oddNum}`)
+
+// *** Array Destructuring
+
+var arrayDestruct = [1,2,3,4,5]
+
+var [x,y,z,u,a] = arrayDestruct
+
+console.log(a)
+
+
 
 
 
