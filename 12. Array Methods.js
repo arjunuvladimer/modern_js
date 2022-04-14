@@ -95,3 +95,46 @@ let newArrayForMap = arrayForMap.map((element) => element * 2)
 
 console.log(`Map Method: ${newArrayForMap}`)
 
+// 10. POP Method
+// Syntax: Array.pop()
+// Pops the last element in the array
+let student = ["william", "john","chris","mike"]
+let newStudents = student.pop()
+console.log(`POP Method ${newStudents}`)
+
+// 11. Push Method
+// Syntax: Array.push()
+let stringArray = ["Jhonny","Peter","Sammy"]
+let newArrayIndexToPush = stringArray.push("Larry")
+console.log(`Push Method: ${stringArray}`)
+console.log(`Push Method: ${newArrayIndexToPush}`)
+
+// 12. Reduce  Method
+// Syntax: Array.reduce(callback(left,right))
+
+let reduceNumber = [1,1,2,3,4].reduce((a,b) => a *b)
+// => 4*1 + 1*2 +2*3+ 3*4 => 4 + 2 + 6 + 12 => 24 // Memoization
+
+console.log(`Reduce Method: ${reduceNumber}`)
+
+
+// 13. Reduce Right Method
+// Syntax: Array.reduceRight(callback())
+
+var reduceRightNumber = [0,2,1].reduceRight((a,b) => a-b)
+
+console.log(`Reducer Right Method: ${reduceRightNumber}`)
+
+// 14. Shit Method
+// Syntax: Array.shift()
+
+var shiftNumber = [10,20,30,40,50]
+// Removes First Element
+const newShiftNumber = shiftNumber.shift()
+console.log(`Shift Method: ${shiftNumber}`)
+console.log(`Shift Method: ${newShiftNumber}`)
+
+
+
+
+
