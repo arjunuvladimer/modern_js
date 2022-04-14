@@ -104,3 +104,9 @@ for(var i = 0; i < array3.length; i++){
 
 console.log(multi)
 
+
+var array1 = [1,2,3,4]
+console.log("Array Check" + array1)
+var array2 = new Array([1,2,4,5])
+console.log("Array Check" + array2)
+

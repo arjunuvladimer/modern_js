@@ -68,43 +68,55 @@
     // 2. Asynchronous Await
 
             
-        async function thingOne() {
-                setTimeout(() => console.log("hello"),2000) // Blocking 
+        // async function thingOne() {
+        //         setTimeout(() => console.log("hello"),2000) // Blocking 
                
-                            return 10
-                                    }
+        //                     return 10
+        //                             }
                         // thingOne()
 
-        async function thingTwo(value) { 
-                                 return value 
-                                }
+        // async function thingTwo(value) { 
+        //                          return value 
+        //                         }
                                  
-        async function thingThree(value) { 
-            return value 
-        }
+        // async function thingThree(value) { 
+        //     return value 
+        // }
 
-        async function doManyThings() {
-                    // Creating a Variable called result and assigning thingOne return statement to it -> 10
-                    var result = await thingOne(); // Thing Functional Call
+        // async function doManyThings() {
+        //             // Creating a Variable called result and assigning thingOne return statement to it -> 10
+        //             var result = await thingOne(); // Thing Functional Call
 
-                        // Independent of the Functions
-                        console.log("First Function Finished")
+        //                 // Independent of the Functions
+        //                 console.log("First Function Finished")
 
-                    // Creating a Variable called result2 and assigning thingOne return statement to it -> 10
+        //             // Creating a Variable called result2 and assigning thingOne return statement to it -> 10
 
-                    var resultTwo = await thingTwo(result);
+        //             var resultTwo = await thingTwo(result);
 
-                    var finalResult = await thingThree(resultTwo);
+        //             var finalResult = await thingThree(resultTwo);
 
-                    return finalResult;
-                    }
+        //             return finalResult;
+        //             }
 
-        // doManyThings() // Do Many Things Functional Calll
+        // // doManyThings() // Do Many Things Functional Calll
 
-        var final = doManyThings();
+        // var final = doManyThings();
         
-        console.log(final)
-        console.log("End of Script")
+        // console.log(final)
+        // console.log("End of Script")
+
+        class checkingStatic{
+    static display1(a){
+        console.log("checking some text"+a)
+    } 
+}
+var obj = new checkingStatic()
+checkingStatic.display1(10)
+checkingStatic.display1(11)
+checkingStatic.display1(12)
+obj.display1() 
+
 
 
 

@@ -116,3 +116,22 @@ obj7.display2(1,2,3)
 // Abstraction
 // Interfaces
 
+
+
+// Static Methods
+
+class checkingStatic{
+    static display1(a){
+        console.log("checking some text"+a)
+    } 
+}
+var obj = new checkingStatic()
+obj.display1() 
+checkingStatic.display1(10)
+checkingStatic.display1(11)
+checkingStatic.display1(12)
+
+
+
+
+
