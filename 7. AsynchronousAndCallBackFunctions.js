@@ -1,34 +1,46 @@
-const { divide } = require("cypress/types/lodash")
+// Synchronous Function 
 
-// Asynchronous Functions
-function add(a,b){
-    var c = a +b
-    console.log(c)
-}
+
+
+// Synchronous Functions
+
 
 function multiplication(c,d){
-    var e = c * d
-    setTimeout(
-        ()=> {
-        console.log(e)}, 0)
+    var e = c * d;
+    return e
+}
+function add(a,b){
+    var c = a +b
+    return c
+}
+function divide(d,e){
+    var f = d / e
+    return f
+}
+console.log(multiplication(1,2)) // Functional Call
+
+setTimeout(
+    function display(){
+        console.log("some text")
+    }
+    ,2000)// setTimeout Functional Call
+
+console.log(add(2,3))
+console.log(divide(100,10))
+
+// Call Back Functions
+function callBackFunction(fnSms, fnEmail){
+    console.log("Call Back Functions")
+
+    fnSms() // Functional Call of fnSMS
+    fnEmail() // Functional Call of fnEmail
 }
 
-multiplication(10,20)
-add(11,20)
-divide(234,23)
+callBackFunction( 
+    () => console.log("Printing SMS"), // Function Defintion of fnSMS as Pass By Value
+    () => console.log("Printing Email"))   // Function Defintion of fnSMS as Pass By Value
 
-// // Call Back Functions
-// function callBackFunction(fnSms, fnEmail){
-//     console.log("Call Back Functions")
-
-//     fnSms() // Functional Call of fnSMS
-//     fnEmail() // Functional Call of fnEmail
-// }
-
-// callBackFunction( 
-//     () => console.log("Printing SMS"), // Function Defintion of fnSMS as Pass By Value
-//     () => console.log("Printing Email")   // Function Defintion of fnSMS as Pass By Value
- // Functional Call of callBackFunction
+    //  Functional Call of callBackFunction
 
 
 
