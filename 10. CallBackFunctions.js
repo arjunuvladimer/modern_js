@@ -11,8 +11,10 @@ parent(
     ,12) // Functional Call of Parent
 
 
-function add(){
-    console.log('Add function') // Function Definition/
+function setTimeout(){
+   display() // Function Definition/
 }
 
-add()// Functional Call
+setTimeout(function display(){
+    console.log("some text")
+},2000)// Functional Call
