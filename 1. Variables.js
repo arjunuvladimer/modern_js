@@ -100,5 +100,3 @@
 
 
       // Note: For Let & Const Variable Hoisting doesn't work 
-
-
